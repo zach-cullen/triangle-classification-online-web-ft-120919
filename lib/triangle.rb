@@ -3,7 +3,10 @@ class Triangle
   attr_reader :sides
   
   def initialize(side1, side2, side3)
-    @sides = [side1, side2, side3].sort!
+    sorted_sides = [side1, side2, side3].sort!
+    @side1 = sorted_sides[0]
+    @side2 = sorted_sides[1]
+    @side3 = sorted_sides[2]
     if self.is_valid?
       self.find_kind
     else
