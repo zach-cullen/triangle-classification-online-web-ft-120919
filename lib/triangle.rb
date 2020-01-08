@@ -30,4 +30,6 @@ class Triangle
       @kind = :scalene
     end
   end
+  
+  
 end
