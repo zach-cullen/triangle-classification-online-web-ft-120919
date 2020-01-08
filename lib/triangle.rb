@@ -7,7 +7,7 @@ class Triangle
     if self.is_valid?
       self.find_kind
     else
-      puts "I'm not valid"
+      raise TriangleError
     end
   end
   
