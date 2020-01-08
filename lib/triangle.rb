@@ -14,7 +14,7 @@ class Triangle
   def is_valid?
     if @sides.include?(0)
       false
-    elsif @sides[0] + @sides[1] < @sides[2]
+    elsif @sides[0] + @sides[1] <= @sides[2]
       false
     else
       true
