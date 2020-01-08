@@ -7,6 +7,7 @@ class Triangle
     @side1 = sorted_sides[0]
     @side2 = sorted_sides[1]
     @side3 = sorted_sides[2]
+    
     if self.is_valid?
       self.find_kind
     else
@@ -17,7 +18,7 @@ class Triangle
   def is_valid?
     if @sides.include?(0)
       false
-    elsif @sides[0] + @sides[1] <= @sides[2]
+    elsif @side1 + @side2 <= @side3
       false
     else
       true
@@ -25,9 +26,9 @@ class Triangle
   end
   
   def find_kind
-    if @sides[0] == @sides[1] && @sides[1] == @sides[2]
+    if @side1 == @side2 && @side2 == @side3
       @kind = :equilateral
-    elsif @sides[0] == @sides[1] || @sides[1] == @sides[2]
+    elsif @side1 == @side2 || @side2 == @side3
       @kind = :isosceles
     else
       @kind = :scalene
