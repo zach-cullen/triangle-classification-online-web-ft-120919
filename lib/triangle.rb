@@ -31,5 +31,8 @@ class Triangle
     end
   end
   
+  # Error Handling
   
+  class TriangleError < StandardError
+  end
 end
