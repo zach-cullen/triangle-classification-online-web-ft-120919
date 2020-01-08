@@ -24,7 +24,7 @@ class Triangle
   def find_kind
     if @sides[0] == @sides[1] && @sides[1] == @sides[2]
       @kind = :equilateral
-    elsif @side[0] == @side[1] || @side[1] == @side[2]
+    elsif @sides[0] == @sides[1] || @sides[1] == @sides[2]
       @kind = :isosceles
     else
       @kind = :scalene
